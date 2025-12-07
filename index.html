@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Three Blind Men Describe an Elephant – Exam Notes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #6366f1;
+      --secondary-color: #475569;
+      --background-color: #0f172a;
+      --card-background: #1e293b;
+      --text-color: #f1f5f9;
+      --border-color: #334155;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: var(--card-background);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .lang-btn:hover {
+      background-color: #4f46e5;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: var(--card-background);
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .question:hover {
+      box-shadow: var(--shadow);
+    }
+
+    .question b {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    .question p {
+      margin-top: 10px;
+      white-space: pre-wrap;
+    }
+
+    .tips {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #334155;
+      border-left: 4px solid var(--primary-color);
+      border-radius: 8px;
+    }
+
+    .tips b {
+      font-size: 18px;
+      color: var(--primary-color);
+    }
+
+    .tips ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .tips li {
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+      .top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <h1 id="title">Three Blind Men Describe an Elephant — Exam Notes (English)</h1>
+      <div>
+        <button class="lang-btn" type="button" onclick="setLang('en')">English</button>
+        <button class="lang-btn" type="button" onclick="setLang('hi')">Hinglish</button>
+      </div>
+    </div>
+
+    <div id="content"></div>
+
+    <div class="tips">
+      <b>Exam Writing Tips:</b>
+      <ul>
+        <li>Underline the question and leave a line before answer</li>
+        <li>Write short &amp; clear sentences for high marks</li>
+        <li>End with moral/summary line to impress examiner</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const answers = {
+      en: [
+        {
+          q: "Q1. Summary of the chapter",
+          a: "The story “Three Blind Men Describe an Elephant” is about a narrator who meets three blind men living in a lodge. They are Sekhar, Reghuraman and Chandran. When the narrator asks them about an elephant, Sekhar remembers childhood trauma and sees the elephant as fear. Reghuraman sees elephants in dreams and imagines beauty. Chandran loves elephants deeply and has a tattoo, so for him the elephant is identity and belonging. The story shows that each person sees reality based on personal experience."
+        },
+        {
+          q: "Q2. Theme of the story",
+          a: "The theme of the story is that human perception is limited. No one sees the whole truth; each person sees only their version."
+        },
+        {
+          q: "Q3. Character Sketch of Sekhar",
+          a: "Sekhar is a telephone operator and cricket lover. He fears elephants because of a childhood festival accident. His perception comes from trauma."
+        },
+        {
+          q: "Q4. Character Sketch of Reghuraman",
+          a: "Reghuraman is a music teacher who dreams of elephants. He represents imagination and beauty beyond physical sight."
+        },
+        {
+          q: "Q5. Character Sketch of Chandran",
+          a: "Chandran is a temple guide with strong emotional attachment to elephants. He has an elephant tattoo and sees the elephant as identity."
+        },
+        {
+          q: "Q6. Symbolic meaning of the elephant",
+          a: "The elephant represents truth and reality. Each man sees only a part of it."
+        },
+        {
+          q: "Q7. Message of the story",
+          a: "We should respect others' viewpoints because everyone understands life differently."
+        },
+        {
+          q: "Q8. Justification of the title",
+          a: "The title is suitable because the story shows how three blind men describe an elephant differently based on experience."
+        }
+      ],
+
+      hi: [
+        {
+          q: "Q1. Chapter ka Saar",
+          a: "Kahani ek narrator ki hai jo lodge me rehta hai jaha teen andhe aadmi rehte hain. Jab unse elephant ke baare me poocha jaata hai, Sekhar ke liye elephant dar aur trauma hai, Reghuraman ke liye imagination aur sapna hai, aur Chandran ke liye pyaar aur identity. Kahani sikhati hai ki har vyakti apne anubhav ke hisaab se sach dekhata hai."
+        },
+        {
+          q: "Q2. Theme",
+          a: "Theme yeh hai ki koi bhi insaan poora sach nahi dekhta. Sab apne anubhav ke hisaab se reality ko samajhte hain."
+        },
+        {
+          q: "Q3. Sekhar ka Character Sketch",
+          a: "Sekhar telephone operator hai aur cricket ka shaukeen. Festival accident ke kaaran woh elephant ko dar se jodta hai."
+        },
+        {
+          q: "Q4. Reghuraman ka Character Sketch",
+          a: "Reghuraman music teacher hai aur sapnon me elephants dekhta hai. Uske liye elephant imagination ka prateek hai."
+        },
+        {
+          q: "Q5. Chandran ka Character Sketch",
+          a: "Chandran temple guide hai jise elephants se bahut lagao hai. Tattoo ke kaaran elephant uski identity bankar rehta hai."
+        },
+        {
+          q: "Q6. Elephant ka Symbolic Meaning",
+          a: "Elephant sachai aur reality ka prateek hai. Sab ek hissa dekhte hain, poora nahi."
+        },
+        {
+          q: "Q7. Moral",
+          a: "Dusron ki soch ka samman karna chahiye kyunki sabka nazariya alag hota hai."
+        },
+        {
+          q: "Q8. Title ka Justification",
+          a: "Title sahi hai kyunki kahani mein teen andhe elephant ko alag tarike se describe karte hain."
+        }
+      ]
+    };
+
+    function setLang(lang) {
+      const area = document.getElementById("content");
+      const title = document.getElementById("title");
+
+      title.textContent =
+        lang === "en"
+          ? "Three Blind Men Describe an Elephant — Exam Notes (English)"
+          : "Three Blind Men Describe an Elephant — Pariksha Notes (Hinglish)";
+
+      area.innerHTML = "";
+
+      answers[lang].forEach((item) => {
+        const div = document.createElement("div");
+        div.className = "question";
+
+        const b = document.createElement("b");
+        b.textContent = item.q;
+
+        const p = document.createElement("p");
+        p.textContent = item.a;
+
+        div.appendChild(b);
+        div.appendChild(p);
+
+        area.appendChild(div);
+      });
+    }
+
+    // Initial language
+    setLang("en");
+  </script> tu poora edit kar ke poora de de
+</body>
+</html>
